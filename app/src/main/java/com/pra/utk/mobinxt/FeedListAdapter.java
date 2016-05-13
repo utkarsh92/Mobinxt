@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
 
@@ -61,8 +62,8 @@ public class FeedListAdapter extends BaseAdapter {
         if (inflater == null)
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (type == 0)
-        {
+//        if (type == 0)
+//        {
             convertView = inflater.inflate(R.layout.feed_item, null);
 
             TextView name = (TextView) convertView.findViewById(R.id.name);
@@ -70,13 +71,16 @@ public class FeedListAdapter extends BaseAdapter {
             TextView trip = (TextView) convertView.findViewById(R.id.trip);
             TextView location = (TextView) convertView.findViewById(R.id.location);
             TextView likes = (TextView) convertView.findViewById(R.id.likes);
+            ImageView bgpic = (ImageView) convertView.findViewById(R.id.bg_image);
+            ImageView propic = (ImageView) convertView.findViewById(R.id.profile_pic);
 
             name.setText(item.getName());
             timestamp.setText(item.getTimestamp());
             trip.setText(item.getTrip());
             location.setText(item.getLocation());
             likes.setText(item.getLikes());
-        }
+//            item.setBgpic();
+//        }
 
         return convertView;
     }

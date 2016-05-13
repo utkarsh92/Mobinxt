@@ -12,13 +12,23 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.pra.utk.mobinxt.fbAssets.LoginFragment;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private FeedListAdapter listAdapter;
+    private List<FeedItem> feedItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,51 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        listView = (ListView) findViewById(R.id.list);
+
+        feedItems = new ArrayList<FeedItem>();
+
+        listAdapter = new FeedListAdapter(this, feedItems);
+        listView.setAdapter(listAdapter);
+
+        setFeedList();
+    }
+
+    private void setFeedList() {
+
+        for (int i = 0; i < 3 ; i++)
+        {
+            FeedItem item = new FeedItem();
+
+            if(i == 0) {
+                item.setName("Emilia Clarke");
+                item.setTimestamp("7h ago");
+                item.setTrip("My Euro Trip");
+                item.setLocation("Venice, Italy");
+                item.setLikes(14);
+            }else if (i == 1){
+                item.setName("Juliette Arnett");
+                item.setTimestamp("2d ago");
+                item.setTrip("Swiss Trek");
+                item.setLocation("Zermatt, Switzerland");
+                item.setLikes(25);
+            }else if (i == 2){
+                item.setName("Tony Stark");
+                item.setTimestamp("2w ago");
+                item.setTrip("French Connection");
+                item.setLocation("Paris, France");
+                item.setLikes(60);
+            }
+
+            feedItems.add(item);
+        }
+
+
+        // notify data changes to list adapater
+        listAdapter.notifyDataSetChanged();
+
     }
 
     @Override
