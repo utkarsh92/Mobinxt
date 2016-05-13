@@ -2,6 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.pra.utk.mobinxt.MainActivity">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="99"
+        android:title="@string/action_search"
+        android:menuCategory="secondary"/>
+
     <item
         android:id="@+id/action_logout"
         android:orderInCategory="100"
