@@ -3,18 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--<RelativeLayout-->
-        <!--android:layout_width="385dp"-->
-        <!--android:layout_height="220dp"-->
-        <!--android:layout_centerHorizontal="true">-->
-        <ImageView
-            android:id="@+id/bg_image"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginTop="-2dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/tint" />
-    <!--</RelativeLayout>-->
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="-2dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tint" />
 
     <LinearLayout
         android:layout_width="wrap_content"

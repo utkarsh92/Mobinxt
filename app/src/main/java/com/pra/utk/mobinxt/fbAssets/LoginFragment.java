@@ -113,27 +113,11 @@ public class LoginFragment extends Fragment {
         mprofileTracker.startTracking();
     }
 
-    private void homeFragment(Profile profile) {
-
-        if (profile != null) {
-            Bundle mBundle = new Bundle();
-            mBundle.putParcelable(PARCEL_KEY, profile);
-            HomeFragment hf = new HomeFragment();
-            hf.setArguments(mBundle);
-
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager
-                    .beginTransaction();
-            fragmentTransaction.replace(R.id.mainContainer, new HomeFragment());
-            fragmentTransaction.commit();
-        }
-    }
-
     private void feedFragment(){
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
-        fragmentTransaction.replace(R.id.mainContainer, new FeedPage());
+        fragmentTransaction.replace(R.id.drawer_layout, new FeedPage());
         fragmentTransaction.commit();
     }
 
