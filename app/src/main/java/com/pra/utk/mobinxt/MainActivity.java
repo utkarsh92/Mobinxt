@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private FeedListAdapter listAdapter;
     private List<FeedItem> feedItems;
-    public int[] bg_pic_resource = {R.drawable.tint, R.drawable.photo_1438201743149_3cc16cd4cddd, R.drawable.paris_8};
+    public int[] bg_pic_resource = {R.drawable.tint, R.drawable.photo_1438201743149_3cc16cd4cddd, R.drawable.paris_9};
     public int[] pro_pic_resource = {R.drawable.avatar, R.drawable.avatar, R.drawable.avatar};
 
     @Override
