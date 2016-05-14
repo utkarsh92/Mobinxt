@@ -56,31 +56,36 @@ public class FeedListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        int type = getItemViewType(position);
+//        System.out.println("\n 1");
         FeedItem item = feedItems.get(position);
+//        System.out.println("\n 2");
 
         if (inflater == null)
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-//        if (type == 0)
-//        {
-            convertView = inflater.inflate(R.layout.feed_item, null);
+        convertView = inflater.inflate(R.layout.feed_item, null);
 
-            TextView name = (TextView) convertView.findViewById(R.id.name);
-            TextView timestamp = (TextView) convertView.findViewById(R.id.timestamp);
-            TextView trip = (TextView) convertView.findViewById(R.id.trip);
-            TextView location = (TextView) convertView.findViewById(R.id.location);
-            TextView likes = (TextView) convertView.findViewById(R.id.likes);
-            ImageView bgpic = (ImageView) convertView.findViewById(R.id.bg_image);
-            ImageView propic = (ImageView) convertView.findViewById(R.id.profile_pic);
+        TextView name = (TextView) convertView.findViewById(R.id.name);
+        TextView timestamp = (TextView) convertView.findViewById(R.id.timestamp);
+        TextView trip = (TextView) convertView.findViewById(R.id.trip);
+        TextView location = (TextView) convertView.findViewById(R.id.location);
+        TextView likes = (TextView) convertView.findViewById(R.id.likes);
+        ImageView bgpic = (ImageView) convertView.findViewById(R.id.bg_image);
+        ImageView propic = (ImageView) convertView.findViewById(R.id.profile_pic);
 
-            name.setText(item.getName());
-            timestamp.setText(item.getTimestamp());
-            trip.setText(item.getTrip());
-            location.setText(item.getLocation());
-            likes.setText(item.getLikes());
+        name.setText(item.getName());
+        timestamp.setText(item.getTimestamp());
+        trip.setText(item.getTrip());
+        location.setText(item.getLocation());
+//        System.out.println("\n 3");
+        likes.setText(item.getLikes());
+//        System.out.println("\n 4");
+//        int a = R.drawable.tint;
+//        bgpic.setImageResource(a);
+//        System.out.println("\n Residddd----> " + item.getBgpic());
+        bgpic.setImageResource(item.getBgpic());
+        propic.setImageResource(item.getPropic());
 //            item.setBgpic();
-//        }
 
         return convertView;
     }

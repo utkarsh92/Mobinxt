@@ -7,13 +7,14 @@ import android.widget.ImageView;
  */
 public class FeedItem {
     String name,timestamp,trip,location;
-    int likes;
-    ImageView bgpic,propic;
+    String likes;
+//    ImageView bgpic,propic;
+    int bgpic,propic;
 
     public FeedItem(){
     }
 
-    public FeedItem(String name, String timestamp, String trip, String location, int likes, ImageView bgpic, ImageView propic) {
+    public FeedItem(String name, String timestamp, String trip, String location, String likes, int bgpic, int propic) {
         this.name = name;
         this.timestamp = timestamp;
         this.trip = trip;
@@ -56,27 +57,43 @@ public class FeedItem {
         this.location = location;
     }
 
-    public int getLikes() {
+    public String getLikes() {
         return likes;
     }
 
-    public void setLikes(int likes) {
+    public void setLikes(String likes) {
         this.likes = likes;
     }
 
-    public ImageView getBgpic() {
+//    public ImageView getBgpic() {
+//        return bgpic;
+//    }
+//
+//    public void setBgpic(ImageView bgpic) {
+//        this.bgpic = bgpic;
+//    }
+//
+//    public ImageView getPropic() {
+//        return propic;
+//    }
+//
+//    public void setPropic(ImageView propic) {
+//        this.propic = propic;
+//    }
+
+    public int getBgpic() {
         return bgpic;
     }
 
-    public void setBgpic(ImageView bgpic) {
+    public void setBgpic(int bgpic) {
         this.bgpic = bgpic;
     }
 
-    public ImageView getPropic() {
+    public int getPropic() {
         return propic;
     }
 
-    public void setPropic(ImageView propic) {
+    public void setPropic(int propic) {
         this.propic = propic;
     }
 }
