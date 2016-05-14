@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -139,6 +140,8 @@ public class LoginFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        Toolbar toolbar = (Toolbar) getView().findViewById(R.id.toolbar);
+//        toolbar.setEnabled(false);
         return inflater.inflate(R.layout.login_fragment, container, false);
     }
 

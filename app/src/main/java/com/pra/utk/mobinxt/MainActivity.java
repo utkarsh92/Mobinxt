@@ -26,12 +26,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView listView;
-    private FeedListAdapter listAdapter;
-    private List<FeedItem> feedItems;
-    public int[] bg_pic_resource = {R.drawable.tint, R.drawable.photo_1438201743149_3cc16cd4cddd, R.drawable.paris_9};
-    public int[] pro_pic_resource = {R.drawable.avatar, R.drawable.avatar, R.drawable.avatar};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +37,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.threebars);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setImageDrawable(ContextCompat.getDrawable(getBaseContext(),R.drawable.Button_BG));
-//        fab.setBackground(getResources().getDrawable(R.drawable.button_bg));
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,62 +44,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-
-        listView = (ListView) findViewById(R.id.list);
-
-        feedItems = new ArrayList<FeedItem>();
-
-        listAdapter = new FeedListAdapter(this, feedItems);
-        listView.setAdapter(listAdapter);
-
-        setFeedList();
     }
 
-    private void setFeedList() {
-
-        for (int i = 0; i < 3 ; i++)
-        {
-            FeedItem item = new FeedItem();
-
-            if(i == 0) {
-                item.setName("Emilia Clarke");
-                item.setTimestamp("7h ago");
-                item.setTrip("My Euro Trip");
-                item.setLocation("Venice, Italy");
-                item.setLikes("14");
-                System.out.println("\n Resid-----> " + bg_pic_resource[i]);
-                item.setBgpic(bg_pic_resource[i]);
-//                int a = item.getBgpic();
-//                System.out.println("\n A-----> " + a );
-                item.setPropic(pro_pic_resource[i]);
-            }else if (i == 1){
-                item.setName("Juliette Arnett");
-                item.setTimestamp("2d ago");
-                item.setTrip("Swiss Trek");
-                item.setLocation("Zermatt, Switzerland");
-                item.setLikes("25");
-                item.setBgpic(bg_pic_resource[i]);
-//                System.out.println(item.getBgpic()+"");
-                item.setPropic(pro_pic_resource[i]);
-            }else if (i == 2){
-                item.setName("Amy Pond");
-                item.setTimestamp("2w ago");
-                item.setTrip("French Connection");
-                item.setLocation("Paris, France");
-                item.setLikes("60");
-                item.setBgpic(bg_pic_resource[i]);
-                item.setPropic(pro_pic_resource[i]);
-            }
-
-            feedItems.add(item);
-        }
-
-
-        // notify data changes to list adapater
-        listAdapter.notifyDataSetChanged();
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -134,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
+
             LoginManager.getInstance().logOut();
             FragmentManager fragmentManager = this.getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager
@@ -141,8 +71,11 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.mainContainer, new LoginFragment());
             fragmentTransaction.commit();
             return true;
+
         }else if (id == R.id.search) {
+
             Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
+
         }
 
         return super.onOptionsItemSelected(item);

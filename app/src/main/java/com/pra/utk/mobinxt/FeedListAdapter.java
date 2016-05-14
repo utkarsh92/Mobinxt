@@ -56,9 +56,7 @@ public class FeedListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-//        System.out.println("\n 1");
         FeedItem item = feedItems.get(position);
-//        System.out.println("\n 2");
 
         if (inflater == null)
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -77,15 +75,9 @@ public class FeedListAdapter extends BaseAdapter {
         timestamp.setText(item.getTimestamp());
         trip.setText(item.getTrip());
         location.setText(item.getLocation());
-//        System.out.println("\n 3");
         likes.setText(item.getLikes());
-//        System.out.println("\n 4");
-//        int a = R.drawable.tint;
-//        bgpic.setImageResource(a);
-//        System.out.println("\n Residddd----> " + item.getBgpic());
         bgpic.setImageResource(item.getBgpic());
         propic.setImageResource(item.getPropic());
-//            item.setBgpic();
 
         return convertView;
     }

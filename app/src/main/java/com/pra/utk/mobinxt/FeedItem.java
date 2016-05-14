@@ -8,7 +8,6 @@ import android.widget.ImageView;
 public class FeedItem {
     String name,timestamp,trip,location;
     String likes;
-//    ImageView bgpic,propic;
     int bgpic,propic;
 
     public FeedItem(){
@@ -64,22 +63,6 @@ public class FeedItem {
     public void setLikes(String likes) {
         this.likes = likes;
     }
-
-//    public ImageView getBgpic() {
-//        return bgpic;
-//    }
-//
-//    public void setBgpic(ImageView bgpic) {
-//        this.bgpic = bgpic;
-//    }
-//
-//    public ImageView getPropic() {
-//        return propic;
-//    }
-//
-//    public void setPropic(ImageView propic) {
-//        this.propic = propic;
-//    }
 
     public int getBgpic() {
         return bgpic;
