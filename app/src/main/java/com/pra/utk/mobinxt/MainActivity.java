@@ -102,17 +102,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.nav_camera) {
-            Toast.makeText(this, "Import",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Import",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
-            Toast.makeText(this, "Gallery",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Gallery",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_slideshow) {
-            Toast.makeText(this, "Slideshow",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Slideshow",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(this, "Manage",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Manage",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "Share",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Share",Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
-            Toast.makeText(this, "Send",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Send",Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
