@@ -1,4 +1,4 @@
-package com.pra.utk.mobinxt;
+package com.pra.utk.mobinxt.Model;
 
 import android.widget.ImageView;
 

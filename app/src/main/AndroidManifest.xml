@@ -16,7 +16,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Controllers.Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>

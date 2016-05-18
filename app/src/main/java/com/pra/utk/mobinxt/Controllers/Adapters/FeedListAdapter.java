@@ -1,4 +1,4 @@
-package com.pra.utk.mobinxt;
+package com.pra.utk.mobinxt.Controllers.Adapters;
 
 /**
  * Created by Pewds on 20-Nov-15.
@@ -6,14 +6,16 @@ package com.pra.utk.mobinxt;
 
 import android.app.Activity;
 import android.content.Context;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.pra.utk.mobinxt.Model.FeedItem;
+import com.pra.utk.mobinxt.R;
+
 import java.util.List;
 
 public class FeedListAdapter extends BaseAdapter {
@@ -56,20 +58,24 @@ public class FeedListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        FeedItem item = feedItems.get(position);
+        TextView name,timestamp,trip,location,likes;
+        ImageView bgpic,propic;
+        FeedItem item;
+
+        item = feedItems.get(position);
 
         if (inflater == null)
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         convertView = inflater.inflate(R.layout.feed_item, null);
 
-        TextView name = (TextView) convertView.findViewById(R.id.name);
-        TextView timestamp = (TextView) convertView.findViewById(R.id.timestamp);
-        TextView trip = (TextView) convertView.findViewById(R.id.trip);
-        TextView location = (TextView) convertView.findViewById(R.id.location);
-        TextView likes = (TextView) convertView.findViewById(R.id.likes);
-        ImageView bgpic = (ImageView) convertView.findViewById(R.id.bg_image);
-        ImageView propic = (ImageView) convertView.findViewById(R.id.profile_pic);
+        name = (TextView) convertView.findViewById(R.id.name);
+        timestamp = (TextView) convertView.findViewById(R.id.timestamp);
+        trip = (TextView) convertView.findViewById(R.id.trip);
+        location = (TextView) convertView.findViewById(R.id.location);
+        likes = (TextView) convertView.findViewById(R.id.likes);
+        bgpic = (ImageView) convertView.findViewById(R.id.bg_image);
+        propic = (ImageView) convertView.findViewById(R.id.profile_pic);
 
         name.setText(item.getName());
         timestamp.setText(item.getTimestamp());

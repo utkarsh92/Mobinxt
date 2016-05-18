@@ -1,4 +1,4 @@
-package com.pra.utk.mobinxt.fbAssets;
+package com.pra.utk.mobinxt.Controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -22,7 +21,6 @@ import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.pra.utk.mobinxt.FeedPage;
 import com.pra.utk.mobinxt.R;
 
 import org.json.JSONException;
