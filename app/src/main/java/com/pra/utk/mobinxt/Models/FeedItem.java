@@ -1,6 +1,4 @@
-package com.pra.utk.mobinxt.Model;
-
-import android.widget.ImageView;
+package com.pra.utk.mobinxt.Models;
 
 /**
  * Created by Pewds on 14-May-16.

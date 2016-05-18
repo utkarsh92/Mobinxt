@@ -13,7 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pra.utk.mobinxt.Model.FeedItem;
+import com.pra.utk.mobinxt.Models.FeedItem;
 import com.pra.utk.mobinxt.R;
 
 import java.util.List;

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.pra.utk.mobinxt.Controllers.Adapters.FeedListAdapter;
-import com.pra.utk.mobinxt.Model.FeedItem;
+import com.pra.utk.mobinxt.Models.FeedItem;
 import com.pra.utk.mobinxt.R;
 
 import java.util.ArrayList;
